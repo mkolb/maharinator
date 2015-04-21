@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Maharinator!</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Maharinator!</h1>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+    <form action="" method=post enctype=multipart/form-data>
+      <p><label for="enrollment">Enrollment File</label><input type=file name=enrollment /></p>
+      <p><label for "mahara">Existing Mahara Users File</label><input type=file name=mahara /></p>
+      <p><input type=submit value=Upload /></p>
+    </form>
+  {% block body %}{% endblock %}
+</div>

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul>
+  {% for id in ids %}
+    <li><h2>{{ id|safe }}</h2>
+  {% else %}
+    <li><em>File contains {{ count }} entries</em>
+    <li><a href="/maharinated/{{ filename }}">Right Click to save the cleaned up file!</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
+

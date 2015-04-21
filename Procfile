@@ -1,0 +1,1 @@
+web: gunicorn maharinator:app --log-file=-
