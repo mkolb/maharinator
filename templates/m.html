@@ -1,12 +1,10 @@
 {% extends "layout.html" %}
 {% block body %}
   <ul>
-  {% for id in ids %}
-    <li><h2>{{ id|safe }}</h2>
-  {% else %}
     <li><em>File contains {{ count }} entries</em>
     <li><a href="/maharinated/{{ filename }}">Right Click to save the cleaned up file!</a></li>
-  {% endfor %}
   </ul>
+  <img src="{{ url_for('static', filename='welcome.gif') }}" alt="you're welcome!">
+  <p><i>from your good buddy, @mkolb</i></p>
 {% endblock %}
 
